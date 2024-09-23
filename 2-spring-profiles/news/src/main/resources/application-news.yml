@@ -1,0 +1,4 @@
+newsapi:
+  v2:
+    baseUrl: https://newsapi.org/v2
+    apiKey: 1234

@@ -1,0 +1,16 @@
+ip2location:
+  v1:
+    baseUrl:
+    apiKey:
+newsapi:
+  v2:
+    baseUrl:
+    apiKey:
+openweathermap:
+  v3:
+    baseUrl:
+    apiKey:
+batch:
+  news:
+    # Every 5 minutes - https://crontab.cronhub.io/
+    fixedScheduleCron: '0 */5 * * * * '

@@ -1,0 +1,4 @@
+ip2location:
+  v1:
+    baseUrl: http://localhost:8081
+    apiKey: 123

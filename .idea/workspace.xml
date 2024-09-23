@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2b9f4e6e-81ce-4bf1-87b8-ea55ad21363f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/main/java/eu/phaf/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/main/java/eu/phaf/location/Ip2LocationClientV1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/main/java/eu/phaf/location/LocationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/main/java/eu/phaf/news/InMemoryNewsDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/main/java/eu/phaf/news/NewsBatchJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/main/java/eu/phaf/news/NewsClientV2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/main/java/eu/phaf/news/NewsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/main/java/eu/phaf/user/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/main/java/eu/phaf/user/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/main/java/eu/phaf/weather/OpenWeatherMapClientV3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/main/java/eu/phaf/weather/WeatherService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/test/java/eu/phaf/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/test/java/eu/phaf/TestApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/test/java/eu/phaf/WiremockServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/test/java/eu/phaf/wiremockfixtures/ImageFixture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/test/java/eu/phaf/wiremockfixtures/LocationApiFixture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/test/java/eu/phaf/wiremockfixtures/NewsOrgApiFixture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/test/java/eu/phaf/wiremockfixtures/WeatherApiFixture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/test/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/test/resources/assertions/responses/user-success.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-base/src/test/resources/wiremock/responses/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/location/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/location/src/main/java/eu/phaf/location/Ip2LocationClientV1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/location/src/main/java/eu/phaf/location/LocationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/news-import/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/news-import/src/main/java/eu/phaf/news/batch/NewsBatchJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/news/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/news/src/main/java/eu/phaf/news/InMemoryNewsDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/news/src/main/java/eu/phaf/news/NewsClientV2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/news/src/main/java/eu/phaf/news/NewsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/src/main/java/eu/phaf/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/src/test/java/eu/phaf/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/src/test/java/eu/phaf/TestApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/src/test/java/eu/phaf/WiremockServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/src/test/java/eu/phaf/wiremockfixtures/ImageFixture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/src/test/java/eu/phaf/wiremockfixtures/LocationApiFixture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/src/test/java/eu/phaf/wiremockfixtures/NewsOrgApiFixture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/src/test/java/eu/phaf/wiremockfixtures/WeatherApiFixture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/src/test/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/src/test/resources/assertions/responses/user-success.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/src/test/resources/wiremock/responses/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/user/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/user/src/main/java/eu/phaf/user/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/user/src/main/java/eu/phaf/user/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/weather/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/weather/src/main/java/eu/phaf/weather/OpenWeatherMapClientV3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-gradle-modules/weather/src/main/java/eu/phaf/weather/WeatherService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/location/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/location/src/main/java/eu/phaf/location/Ip2LocationClientV1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/location/src/main/java/eu/phaf/location/LocationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/location/src/main/java/eu/phaf/location/NoOp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/location/src/main/resources/application-location-local.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/location/src/main/resources/application-location.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/news-import/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/news-import/src/main/java/eu/phaf/news_import/batch/NewsBatchJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/news-import/src/main/java/eu/phaf/news_import/batch/NoOp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/news-import/src/main/resources/application-news-import-local.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/news-import/src/main/resources/application-news-import.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/news/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/news/src/main/java/eu/phaf/news/InMemoryNewsDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/news/src/main/java/eu/phaf/news/NewsClientV2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/news/src/main/java/eu/phaf/news/NewsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/news/src/main/java/eu/phaf/news/NoOp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/news/src/main/resources/application-news-local.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/news/src/main/resources/application-news.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/src/main/java/eu/phaf/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/src/main/java/eu/phaf/main/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/src/test/java/eu/phaf/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/src/test/java/eu/phaf/TestApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/src/test/java/eu/phaf/TestApplicationApiOnly.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/src/test/java/eu/phaf/WiremockServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/src/test/java/eu/phaf/wiremockfixtures/ImageFixture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/src/test/java/eu/phaf/wiremockfixtures/LocationApiFixture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/src/test/java/eu/phaf/wiremockfixtures/NewsOrgApiFixture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/src/test/java/eu/phaf/wiremockfixtures/WeatherApiFixture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/src/test/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/src/test/resources/assertions/responses/user-success.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/src/test/resources/wiremock/responses/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/user/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/user/src/main/java/eu/phaf/user/NoOp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/user/src/main/java/eu/phaf/user/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/user/src/main/java/eu/phaf/user/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/user/src/main/resources/application-user.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/weather/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/weather/src/main/java/eu/phaf/weather/NoOp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/weather/src/main/java/eu/phaf/weather/OpenWeatherMapClientV3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/weather/src/main/java/eu/phaf/weather/WeatherService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/weather/src/main/resources/application-weather-local.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-spring-profiles/weather/src/main/resources/application-weather.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/0-base">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/1-gradle-modules">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/2-spring-profiles">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/2-spring-profiles">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/0-base">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/1-gradle-modules">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="modulith-demo-2-spring-profiles" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="modulith-demo-2-spring-profiles" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="modulith-demo-2-spring-profiles" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2lyFJiOQy9A23UJbFAE9o4UKqZe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.2-spring-profiles [:Application.main()].executor": "Debug",
+    "Gradle.2-spring-profiles [clean build].executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.TestApplication (1).executor": "Run",
+    "Gradle.TestApplication (2).executor": "Run",
+    "Gradle.TestApplication.executor": "Run",
+    "Gradle.TestApplication.shouldRunNewsBatch.executor": "Run",
+    "Gradle.TestApplicationApiOnly.executor": "Run",
+    "Gradle.Tests in 'eu.phaf'.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/rafaelaphaf/IdeaProjects/modulith-demo/2-spring-profiles/news-import/src/main/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/2-spring-profiles/news-import/src/main/resources" />
+      <recent name="$PROJECT_DIR$/2-spring-profiles/weather/src/main/resources" />
+      <recent name="$PROJECT_DIR$/2-spring-profiles/news/src/main/resources" />
+      <recent name="$PROJECT_DIR$/2-spring-profiles/location/src/main/resources" />
+      <recent name="$PROJECT_DIR$/2-spring-profiles/weather/src/main" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="eu.phaf" />
+      <recent name="eu.phaf.weather" />
+      <recent name="eu.phaf.user" />
+      <recent name="eu.phaf.news_import.batch" />
+      <recent name="eu.phaf.news" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="SPRING_PROFILES_ACTIVE" value="local" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="eu.phaf.main.Application" />
+      <module name="modulith-demo-2-spring-profiles.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="eu.phaf.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="2-spring-profiles [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/2-spring-profiles" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestApplication (2)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/2-spring-profiles" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;eu.phaf.TestApplication&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestApplicationApiOnly" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/2-spring-profiles" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;eu.phaf.TestApplicationApiOnly&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'eu.phaf'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/2-spring-profiles" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;eu.phaf.*&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="modulith-demo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="modulith-demo" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Application" />
+      <item itemvalue="Gradle.2-spring-profiles [clean build]" />
+      <item itemvalue="Gradle.TestApplication (2)" />
+      <item itemvalue="Gradle.TestApplicationApiOnly" />
+      <item itemvalue="Gradle.Tests in 'eu.phaf'" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Gradle.2-spring-profiles [clean build]" />
+        <item itemvalue="Gradle.Tests in 'eu.phaf'" />
+        <item itemvalue="Gradle.TestApplicationApiOnly" />
+        <item itemvalue="Gradle.TestApplication (2)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-3183f394aec4-96c0d24d" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b9f4e6e-81ce-4bf1-87b8-ea55ad21363f" name="Changes" comment="" />
+      <created>1726144340558</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726144340558</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/2-spring-profiles/user/src/main/java/eu/phaf/user/UserService.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

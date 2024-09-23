@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    group:
+      default:
+        - user
+        - location
+        - news
+        - news-import
+        - weather
+      local:
+        - default
+        - user-local
+        - location-local
+        - news-local
+        - news-import-local
+        - weather-local
+      api-only:
+        - user
+        - location
+        - news
+        - weather

@@ -1,0 +1,4 @@
+openweathermap:
+  v3:
+    baseUrl: http://localhost:8081
+    apiKey: 123

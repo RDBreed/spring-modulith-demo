@@ -1,0 +1,16 @@
+ip2location:
+  v1:
+    baseUrl: http://localhost:${wiremock.server.port}
+    apiKey: location_api_key
+newsapi:
+  v2:
+    baseUrl: http://localhost:${wiremock.server.port}
+    apiKey: news_api_key
+openweathermap:
+  v3:
+    baseUrl: http://localhost:${wiremock.server.port}
+    apiKey: weather_api_key
+batch:
+  news:
+    # Every 1 second - https://crontab.cronhub.io/
+    fixedScheduleCron: '*/1 * * * * * '

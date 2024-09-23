@@ -1,0 +1,4 @@
+openweathermap:
+  v3:
+    baseUrl: https://api.openweathermap.org/data/3.0
+    apiKey: 1234
