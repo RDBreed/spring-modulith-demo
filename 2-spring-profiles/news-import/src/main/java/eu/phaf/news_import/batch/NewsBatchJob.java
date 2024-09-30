@@ -1,7 +1,7 @@
 package eu.phaf.news_import.batch;
 
-import eu.phaf.news.InMemoryNewsDatabase;
 import eu.phaf.news.NewsClientV2;
+import eu.phaf.news.NewsRepository;
 import eu.phaf.news.NewsService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +18,7 @@ import java.util.List;
 @EnableScheduling
 public class NewsBatchJob {
 
-    private final InMemoryNewsDatabase inMemoryNewsDatabase;
+    private final NewsRepository newsRepository;
     private final NewsClientV2 newsClientV2;
     private final Logger LOGGER = LoggerFactory.getLogger(NewsBatchJob.class);
 
@@ -38,8 +38,8 @@ public class NewsBatchJob {
 
     );
 
-    public NewsBatchJob(InMemoryNewsDatabase inMemoryNewsDatabase, NewsClientV2 newsClientV2) {
-        this.inMemoryNewsDatabase = inMemoryNewsDatabase;
+    public NewsBatchJob(NewsRepository newsRepository, NewsClientV2 newsClientV2) {
+        this.newsRepository = newsRepository;
         this.newsClientV2 = newsClientV2;
     }
 
@@ -50,6 +50,25 @@ public class NewsBatchJob {
                 .flatMap(country -> newsClientV2.getNewsForCountry(country)
                         .collectList()
                         .map(news -> Tuples.of(country, news)))
-                .doOnNext(newsPerCountry -> inMemoryNewsDatabase.saveNews(newsPerCountry.getT1(), newsPerCountry.getT2()));
+                .doOnNext(newsPerCountry ->
+                {
+                    newsRepository.deleteByCountry(newsPerCountry.getT1());
+                    newsPerCountry.getT2().stream()
+                            .map(news -> toNewsEntity(news, newsPerCountry.getT1()))
+                            .forEach(newsRepository::save);
+                });
+    }
+
+    // not clean
+    public NewsRepository.NewsEntity toNewsEntity(NewsService.News news, String country) {
+        NewsRepository.NewsEntity newsEntity = new NewsRepository.NewsEntity();
+        newsEntity.setAuthor(news.author());
+        newsEntity.setCountry(country);
+        newsEntity.setDescription(news.description());
+        newsEntity.setImage(news.image());
+        newsEntity.setTitle(news.title());
+        newsEntity.setPublishedAt(news.publishedAt());
+        newsEntity.setUrl(news.url());
+        return newsEntity;
     }
 }

@@ -1,7 +1,7 @@
 package eu.phaf;
 
 
-import eu.phaf.news.InMemoryNewsDatabase;
+import eu.phaf.news.NewsRepository;
 import eu.phaf.wiremockfixtures.ImageFixture;
 import eu.phaf.wiremockfixtures.LocationApiFixture;
 import eu.phaf.wiremockfixtures.NewsOrgApiFixture;
@@ -37,7 +37,7 @@ public class TestApplicationApiOnly {
     @Autowired
     private WebTestClient webTestClient;
     @Autowired
-    private InMemoryNewsDatabase inMemoryNewsDatabase;
+    private NewsRepository newsRepository;
 
     @Test
     public void shouldRunApplication() {
@@ -48,7 +48,7 @@ public class TestApplicationApiOnly {
         NewsOrgApiFixture.successAnyCountry("news_api_key");
         await()
                 .pollDelay(Duration.ofSeconds(2))
-                .untilAsserted(() -> assertThat(inMemoryNewsDatabase.getLatestNewsByCountry("NL")).isEmpty());
+                .untilAsserted(() -> assertThat(newsRepository.findByCountry("NL")).isEmpty());
     }
 
     @Test

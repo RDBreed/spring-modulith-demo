@@ -2,3 +2,9 @@ newsapi:
   v2:
     baseUrl: https://newsapi.org/v2
     apiKey: 1234
+news:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
