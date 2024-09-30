@@ -15,16 +15,22 @@ on:
 
 jobs:
   run-0:
+    permissions:
+      contents: write
     name: 'Run Gradle Build for 0'
     uses: RDBreed/spring-modulith-demo/.github/workflows/gradle.yml@main
     with:
       gradle_path: '0-base'
   run-1:
+    permissions:
+      contents: write
     name: 'Run Gradle Build for 1'
     uses: RDBreed/spring-modulith-demo/.github/workflows/gradle.yml@main
     with:
       gradle_path: '1-gradle-modules'
   run-2:
+    permissions:
+      contents: write
     name: 'Run Gradle Build for 2'
     uses: RDBreed/spring-modulith-demo/.github/workflows/gradle.yml@main
     with:
