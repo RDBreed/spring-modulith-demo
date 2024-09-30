@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b9f4e6e-81ce-4bf1-87b8-ea55ad21363f" name="Changes" comment="Github action">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/gradle.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gradle.yml" afterDir="false" />
-    </list>
+    <list default="true" id="2b9f4e6e-81ce-4bf1-87b8-ea55ad21363f" name="Changes" comment="Github action #2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -348,7 +345,39 @@
       <option name="project" value="LOCAL" />
       <updated>1727694526806</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Github action #2">
+      <option name="closed" value="true" />
+      <created>1727697103995</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727697103995</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Github action #2">
+      <option name="closed" value="true" />
+      <created>1727697145736</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727697145736</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Github action #2">
+      <option name="closed" value="true" />
+      <created>1727697201512</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727697201512</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Github action #2">
+      <option name="closed" value="true" />
+      <created>1727697340043</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1727697340043</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -367,7 +396,8 @@
     <MESSAGE value="Add example to use jpa &amp; hibernate without automagic of spring boot" />
     <MESSAGE value="Add example to use jpa &amp; hibernate without full automagic of spring boot" />
     <MESSAGE value="Github action" />
-    <option name="LAST_COMMIT_MESSAGE" value="Github action" />
+    <MESSAGE value="Github action #2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Github action #2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

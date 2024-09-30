@@ -20,6 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    defaults:
+      run:
+        working-directory: ./${{ inputs.gradle_path }}
 
     steps:
       - uses: actions/checkout@v4
@@ -36,4 +39,3 @@ jobs:
         run: ./gradlew clean build -p ${{ inputs.gradle_path }}
       - name: Generate and submit dependency graph
         uses: gradle/actions/dependency-submission@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
-        working-directory: ./${{ inputs.gradle_path }}
