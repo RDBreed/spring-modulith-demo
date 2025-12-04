@@ -1,15 +1,15 @@
 ip2location:
   v1:
-    baseUrl:
-    apiKey:
+    baseUrl: https://api.ip2location.io
+    apiKey: 1234
 newsapi:
   v2:
-    baseUrl:
-    apiKey:
+    baseUrl: https://newsapi.org/v2
+    apiKey: 1234
 openweathermap:
   v3:
-    baseUrl:
-    apiKey:
+    baseUrl: https://api.openweathermap.org/data/3.0
+    apiKey: 1234
 batch:
   news:
     # Every 5 minutes - https://crontab.cronhub.io/

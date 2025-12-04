@@ -1,7 +1,7 @@
 plugins {
     id("java")
-    id("org.springframework.boot") version("3.3.3")
-    id("io.spring.dependency-management") version("1.1.6")
+    id("org.springframework.boot") version "4.0.0"
+    id("io.spring.dependency-management") version "1.1.7"
 }
 
 group = "eu.phaf"
@@ -19,13 +19,13 @@ dependencies {
     implementation(project(":user"))
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation("org.springframework.boot:spring-boot-webtestclient")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     // Json assertj assertions
-    testImplementation("net.javacrumbs.json-unit:json-unit-assertj:3.0.0")
+    testImplementation("net.javacrumbs.json-unit:json-unit-assertj:5.1.0")
     // apache text utilities for StringSubstitutor
-    testImplementation("org.apache.commons:commons-text:1.10.0")
-    testImplementation("org.wiremock:wiremock-standalone:3.9.1")
+    testImplementation("org.apache.commons:commons-text:1.14.0")
+    testImplementation("org.wiremock:wiremock-standalone:3.13.2")
 }
 
 tasks.test {

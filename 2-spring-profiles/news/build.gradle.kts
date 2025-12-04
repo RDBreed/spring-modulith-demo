@@ -2,10 +2,9 @@ import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
     java
-    // we are going to need to add api below, see below ;)
-    `java-library`
-    id("org.springframework.boot") version ("3.3.3")
-    id("io.spring.dependency-management") version ("1.1.6")
+    id("java-library")
+    id("org.springframework.boot") version "4.0.0"
+    id("io.spring.dependency-management") version "1.1.7"
 }
 
 repositories {
@@ -23,8 +22,7 @@ dependencies {
     api("org.springframework.data:spring-data-jpa")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 tasks.test {
