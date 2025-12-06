@@ -1,0 +1,4 @@
+ip2location:
+  v1:
+    baseUrl: https://api.ip2location.io
+    apiKey: 1234

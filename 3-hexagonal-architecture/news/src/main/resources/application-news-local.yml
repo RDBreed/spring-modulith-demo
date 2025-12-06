@@ -1,0 +1,4 @@
+newsapi:
+  v2:
+    baseUrl: http://localhost:8081
+    apiKey: 123

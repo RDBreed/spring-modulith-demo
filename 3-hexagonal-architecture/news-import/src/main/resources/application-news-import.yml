@@ -1,0 +1,4 @@
+batch:
+  news:
+    # Every 5 minutes - https://crontab.cronhub.io/
+    fixedScheduleCron: '0 */5 * * * * '
