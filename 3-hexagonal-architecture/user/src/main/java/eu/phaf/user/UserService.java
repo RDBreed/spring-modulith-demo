@@ -1,8 +1,8 @@
 package eu.phaf.user;
 
-import eu.phaf.location.LocationService;
-import eu.phaf.location.LocationServiceIp2Location;
-import eu.phaf.location.LocationServiceIp2Location.Location;
+import eu.phaf.location.application.port.in.LocationService;
+import eu.phaf.location.application.usecase.GetLocationByIpService;
+import eu.phaf.location.domain.Location;
 import eu.phaf.news.NewsService;
 import eu.phaf.news.NewsService.News;
 import eu.phaf.weather.WeatherService;
@@ -22,7 +22,7 @@ public class UserService {
     private final LocationService locationService;
     private final WeatherService weatherService;
 
-    public UserService(NewsService newsService, LocationServiceIp2Location locationService, WeatherService weatherService) {
+    public UserService(NewsService newsService, LocationService locationService, WeatherService weatherService) {
         this.newsService = newsService;
         this.locationService = locationService;
         this.weatherService = weatherService;
