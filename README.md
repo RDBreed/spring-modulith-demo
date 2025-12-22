@@ -8,3 +8,11 @@ Future will tell if this is going to be expanded with some additional APIs or ad
 To run the project:
 - Run the frontend dir with (p)npm, by first doing an install & then pnpm run dev.
 - Run a backend variant, choose whichever you want.
+
+To run the project:
+- Run the frontend dir with (p)npm, by first doing an install & then pnpm run dev.
+- Run a backend variant, choose whichever you want.
+
+To run the project:
+- Run the frontend dir with (p)npm, by first doing an install & then pnpm run dev.
+- Run a backend variant, choose whichever you want.
