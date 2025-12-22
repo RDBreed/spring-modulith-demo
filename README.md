@@ -4,3 +4,7 @@ This repository will contain examples for how to create a modulithic structure w
 The application chosen to develop here, is a location based information provider.  
 The location is based on the ip address and from that news and weather information can be gathered.  
 Future will tell if this is going to be expanded with some additional APIs or additional complexity to demonstrate some more challenges.
+
+To run the project:
+- Run the frontend dir with (p)npm, by first doing an install & then pnpm run dev.
+- Run a backend variant, choose whichever you want.

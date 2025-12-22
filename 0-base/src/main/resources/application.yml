@@ -1,14 +1,17 @@
 ip2location:
   v1:
-    baseUrl: https://api.ip2location.io
+    baseUrl: http://localhost:8080/stubs/ip
+#    baseUrl: https://api.ip2location.io
     apiKey: 1234
 newsapi:
   v2:
-    baseUrl: https://newsapi.org/v2
+    baseUrl: http://localhost:8080/stubs/news
+#    baseUrl: https://newsapi.org/v2
     apiKey: 1234
 openweathermap:
   v3:
-    baseUrl: https://api.openweathermap.org/data/3.0
+    baseUrl: http://localhost:8080/stubs/weather
+#    baseUrl: https://api.openweathermap.org/data/3.0
     apiKey: 1234
 batch:
   news:

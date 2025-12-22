@@ -22,7 +22,9 @@ public class Ip2LocationClientV1 {
     }
 
     public Mono<LocationService.Location> getLocationByIp(String ip) {
-        return WebClient.create(ip2LocationProperties.baseUrl() + "/?key=" + ip2LocationProperties.apiKey() + "&ip=" + ip + "&format=json")
+        String url = ip2LocationProperties.baseUrl() + "/?key=" + ip2LocationProperties.apiKey() + "&ip=" + ip + "&format=json";
+        System.out.println("url: " + url);
+        return WebClient.create(url)
                 .get()
                 .accept(MediaType.APPLICATION_JSON)
                 .exchangeToMono(Ip2LocationClientV1::getIpGeolocationResponseMono)
