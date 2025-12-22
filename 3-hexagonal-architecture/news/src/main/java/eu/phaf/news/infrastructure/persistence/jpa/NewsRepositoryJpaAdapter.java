@@ -1,23 +1,21 @@
-package eu.phaf.news;
+package eu.phaf.news.infrastructure.persistence.jpa;
 
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Service;
+import eu.phaf.news.application.port.out.NewsRepositoryPort;
+import eu.phaf.news.domain.News;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service
-@Profile("jpa")
-public class NewsRepositoryJpaDelegate implements NewsRepository {
+public class NewsRepositoryJpaAdapter implements NewsRepositoryPort {
 
     private final NewsJpaRepository newsJpaRepository;
 
-    public NewsRepositoryJpaDelegate(NewsJpaRepository newsJpaRepository) {
+    public NewsRepositoryJpaAdapter(NewsJpaRepository newsJpaRepository) {
         this.newsJpaRepository = newsJpaRepository;
     }
 
     @Override
-    public void save(NewsService.News news, String country) {
+    public void save(News news, String country) {
         newsJpaRepository.save(toNewsEntity(news, country));
     }
 
@@ -27,11 +25,11 @@ public class NewsRepositoryJpaDelegate implements NewsRepository {
     }
 
     @Override
-    public List<NewsService.News> findByCountry(String country){
+    public List<News> findByCountry(String country) {
         return newsJpaRepository.findByCountry(country).stream().map(this::toNews).collect(Collectors.toList());
     }
-    
-    private NewsJpaRepository.NewsEntity toNewsEntity(NewsService.News news, String country) {
+
+    private NewsJpaRepository.NewsEntity toNewsEntity(News news, String country) {
         NewsJpaRepository.NewsEntity newsEntity = new NewsJpaRepository.NewsEntity();
         newsEntity.setAuthor(news.author());
         newsEntity.setCountry(country);
@@ -42,9 +40,9 @@ public class NewsRepositoryJpaDelegate implements NewsRepository {
         newsEntity.setUrl(news.url());
         return newsEntity;
     }
-    
-    private NewsService.News toNews(NewsJpaRepository.NewsEntity news) {
-        return new NewsService.News(
+
+    private News toNews(NewsJpaRepository.NewsEntity news) {
+        return new News(
                 "newsApi",
                 news.getAuthor(),
                 news.getTitle(),

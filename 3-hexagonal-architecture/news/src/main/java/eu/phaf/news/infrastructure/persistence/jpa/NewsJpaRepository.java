@@ -1,4 +1,4 @@
-package eu.phaf.news;
+package eu.phaf.news.infrastructure.persistence.jpa;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

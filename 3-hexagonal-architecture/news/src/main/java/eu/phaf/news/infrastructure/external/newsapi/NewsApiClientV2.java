@@ -1,35 +1,37 @@
-package eu.phaf.news;
+package eu.phaf.news.infrastructure.external.newsapi;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
+import eu.phaf.news.application.port.out.NewsApiPort;
+import eu.phaf.news.domain.News;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.ClientResponse;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.time.OffsetDateTime;
-import java.util.List;
 import java.util.Optional;
 
-@Service
-@ConfigurationPropertiesScan
-public class NewsApiClientV2 {
+public class NewsApiClientV2 implements NewsApiPort {
     private final NewsApiV2Properties newsApiV2Properties;
+    private final WebClient webClient;
 
-    public NewsApiClientV2(NewsApiV2Properties newsApiV2Properties) {
+    public NewsApiClientV2(NewsApiV2Properties newsApiV2Properties, WebClient webClient) {
         this.newsApiV2Properties = newsApiV2Properties;
+        this.webClient = webClient;
     }
 
-    public Flux<NewsService.News> getNewsForCountry(String country) {
-        return WebClient.create(newsApiV2Properties.baseUrl() + "/top-headlines?country=" + country + "&apiKey=" + newsApiV2Properties.apiKey())
+    @Override
+    public Flux<News> getNewsForCountry(String country) {
+        return webClient
                 .get()
-                .accept(MediaType.APPLICATION_JSON)
+                .uri(uriBuilder -> uriBuilder
+                        .path("/top-headlines")
+                        .queryParam("country", country)
+                        .queryParam("apiKey", newsApiV2Properties.apiKey())
+                        .build()).accept(MediaType.APPLICATION_JSON)
                 .exchangeToMono(NewsApiClientV2::getNewsResponseMono)
                 .flatMapIterable(NewsResponse::articles)
                 .flatMap(newsResponse -> getImage(newsResponse.urlToImage())
-                        .map(imageInBytes -> new NewsService.News(
+                        .map(imageInBytes -> new News(
                                 Optional.ofNullable(newsResponse.source())
                                         .map(NewsResponse.NewsSource::name)
                                         .orElse(""),
@@ -63,16 +65,4 @@ public class NewsApiClientV2 {
     }
 
 
-    @ConfigurationProperties("newsapi.v2")
-    public record NewsApiV2Properties(String baseUrl, String apiKey) {
-    }
-
-    public record NewsResponse(String status, Integer totalResults, List<NewsArticle> articles) {
-        public record NewsArticle(NewsSource source, String author, String title, String description, String url,
-                                  String urlToImage, OffsetDateTime publishedAt, String content) {
-        }
-
-        public record NewsSource(String id, String name) {
-        }
-    }
 }

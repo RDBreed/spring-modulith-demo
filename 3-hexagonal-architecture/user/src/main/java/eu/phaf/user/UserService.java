@@ -1,10 +1,9 @@
 package eu.phaf.user;
 
 import eu.phaf.location.application.port.in.LocationService;
-import eu.phaf.location.application.usecase.GetLocationByIpService;
 import eu.phaf.location.domain.Location;
-import eu.phaf.news.NewsService;
-import eu.phaf.news.NewsService.News;
+import eu.phaf.news.application.port.in.NewsService;
+import eu.phaf.news.domain.News;
 import eu.phaf.weather.WeatherService;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;

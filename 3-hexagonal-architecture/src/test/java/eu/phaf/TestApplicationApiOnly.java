@@ -1,7 +1,7 @@
 package eu.phaf;
 
 
-import eu.phaf.news.NewsJpaRepository;
+import eu.phaf.news.infrastructure.persistence.jpa.NewsJpaRepository;
 import eu.phaf.wiremockfixtures.ImageFixture;
 import eu.phaf.wiremockfixtures.LocationApiFixture;
 import eu.phaf.wiremockfixtures.NewsOrgApiFixture;

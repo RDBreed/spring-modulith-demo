@@ -1,22 +1,20 @@
-package eu.phaf.news;
+package eu.phaf.news.infrastructure.persistence.inmemory;
 
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Service;
+import eu.phaf.news.application.port.out.NewsRepositoryPort;
+import eu.phaf.news.domain.News;
 
 import java.util.List;
 
-@Service
-@Profile("!jpa")
-public class NewsRepositoryInMemoryDelegate implements NewsRepository {
+public class NewsRepositoryInMemoryAdapter implements NewsRepositoryPort {
     private final InMemoryNewsDatabase inMemoryNewsDatabase;
 
-    public NewsRepositoryInMemoryDelegate(InMemoryNewsDatabase inMemoryNewsDatabase) {
+    public NewsRepositoryInMemoryAdapter(InMemoryNewsDatabase inMemoryNewsDatabase) {
         this.inMemoryNewsDatabase = inMemoryNewsDatabase;
     }
 
     @Override
-    public void save(NewsService.News news, String country) {
-        inMemoryNewsDatabase.saveNews(country, news);
+    public void save(News news, String country) {
+        inMemoryNewsDatabase.save(country, news);
     }
 
     @Override
@@ -25,15 +23,15 @@ public class NewsRepositoryInMemoryDelegate implements NewsRepository {
     }
 
     @Override
-    public List<NewsService.News> findByCountry(String country) {
+    public List<News> findByCountry(String country) {
         return inMemoryNewsDatabase.getLatestNewsByCountry(country)
                 .stream()
                 .map(this::map)
                 .toList();
     }
 
-    private NewsService.News map(InMemoryNewsDatabase.News news) {
-        return new NewsService.News(
+    private News map(InMemoryNewsDatabase.NewsDatabase news) {
+        return new News(
                 news.sourceName(),
                 news.author(),
                 news.title(),

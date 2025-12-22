@@ -1,4 +1,4 @@
-package eu.phaf.news;
+package eu.phaf.news.infrastructure.configuration;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

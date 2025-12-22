@@ -1,7 +1,8 @@
 package eu.phaf.news_import.batch;
 
-import eu.phaf.news.NewsRepository;
-import eu.phaf.news.NewsService;
+import eu.phaf.news.application.port.out.NewsRepositoryPort;
+import eu.phaf.news.application.port.in.NewsService;
+import eu.phaf.news.domain.News;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +19,7 @@ import java.util.List;
 @EnableScheduling
 public class NewsBatchJob {
 
-    private final NewsRepository newsRepository;
+    private final NewsRepositoryPort newsRepositoryPort;
     private final NewsService newsService;
     private final Logger LOGGER = LoggerFactory.getLogger(NewsBatchJob.class);
 
@@ -38,13 +39,13 @@ public class NewsBatchJob {
 
     );
 
-    public NewsBatchJob(NewsRepository newsRepository, NewsService newsService) {
-        this.newsRepository = newsRepository;
+    public NewsBatchJob(NewsRepositoryPort newsRepositoryPort, NewsService newsService) {
+        this.newsRepositoryPort = newsRepositoryPort;
         this.newsService = newsService;
     }
 
     @Scheduled(cron = "${batch.news.fixedScheduleCron}")
-    public Flux<Tuple2<String, List<NewsService.News>>> getNewsForDefaultCountries() {
+    public Flux<Tuple2<String, List<News>>> getNewsForDefaultCountries() {
         LOGGER.info("Starting news batch job");
         return Flux.fromIterable(defaultCountries)
                 .flatMap(country -> newsService.getNewsByCountry(country)
@@ -53,9 +54,9 @@ public class NewsBatchJob {
                 .publishOn(Schedulers.boundedElastic())
                 .doOnNext(newsPerCountry ->
                 {
-                    newsRepository.deleteByCountry(newsPerCountry.getT1());
+                    newsRepositoryPort.deleteByCountry(newsPerCountry.getT1());
                     newsPerCountry.getT2()
-                            .forEach(news -> newsRepository.save(news, newsPerCountry.getT1()));
+                            .forEach(news -> newsRepositoryPort.save(news, newsPerCountry.getT1()));
                 });
     }
 }

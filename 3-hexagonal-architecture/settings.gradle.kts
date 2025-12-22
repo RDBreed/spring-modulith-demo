@@ -1,4 +1,4 @@
-rootProject.name = "modulith-demo-2-spring-profiles"
+rootProject.name = "modulith-demo-3-hexagonal-architecture"
 
 include("news")
 include("news-import")
