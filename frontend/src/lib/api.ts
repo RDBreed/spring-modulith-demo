@@ -1,7 +1,7 @@
-import { ApiResponse } from "@/types/dashboard";
+import {ApiResponse} from "@/types/dashboard";
 
-export async function fetchUserInfo(): Promise<ApiResponse> {
-    const res = await fetch("http://localhost:8080/api/user/info", {
+export async function fetchUserInfo(ip: string): Promise<ApiResponse> {
+    const res = await fetch(`http://localhost:8080/api/user/info?ip=${ip}`, {
         cache: "no-store",
     });
 

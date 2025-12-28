@@ -1,7 +1,9 @@
 import {fetchUserInfo} from "@/lib/api";
+import {headers} from "next/headers";
 
 export default async function Home() {
-    const data = await fetchUserInfo();
+    const h = await headers();
+    const data = await fetchUserInfo(h.get("x-forwarded-for") ?? 'unknown');
 
     const mapUrl = `https://www.google.com/maps?q=${data.location.latitude},${data.location.longitude}&z=12&output=embed`;
 
